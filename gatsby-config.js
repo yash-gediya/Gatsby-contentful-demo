@@ -1,8 +1,6 @@
-const dotenv = require("dotenv")
-
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config()
-}
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -50,7 +48,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `9zavg78swyck`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: `RVeT62zcLVnuQo4z5d4-vWPqHP_grRDx1F4AnWd0Sfc`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
