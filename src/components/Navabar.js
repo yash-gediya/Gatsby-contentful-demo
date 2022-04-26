@@ -1,5 +1,4 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import React from "react"
 
 const Navabar = () => {
@@ -24,19 +23,7 @@ const Navabar = () => {
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link
-          to="/articles"
-          onClick={e => {
-            e.preventDefault()
-            trackCustomEvent({
-              category: "articles",
-              action: "Click",
-              label: "gatsby-articles",
-            })
-          }}
-        >
-          Articles
-        </Link>
+        <Link to="/articles">Articles</Link>
 
         <Link to="/projects">Portfolio Projects</Link>
       </div>
