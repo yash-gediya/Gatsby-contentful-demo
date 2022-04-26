@@ -5,6 +5,9 @@ import Layout from "../components/layout"
 import "../../src/pages/styles/home.css"
 
 const Home = ({ data }) => {
+  const handleClick = () => {
+    window.gtag("conversion", "click")
+  }
   return (
     <Layout>
       <section className="header">
@@ -15,6 +18,7 @@ const Home = ({ data }) => {
           <Link className="btn" to="/projects">
             My Portfolio Projects
           </Link>
+          <Button onClick={handleClick}>Click me</Button>
         </div>
         <img
           src={data.file.childImageSharp.fluid.src}
