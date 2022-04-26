@@ -51,6 +51,16 @@ module.exports = {
         accessToken: `RVeT62zcLVnuQo4z5d4-vWPqHP_grRDx1F4AnWd0Sfc`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-XSNFCS2RM0",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        PageTransitionDelay: 0,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
