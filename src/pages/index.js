@@ -6,7 +6,7 @@ import "../../src/pages/styles/home.css"
 
 const Home = ({ data }) => {
   const handleClick = () => {
-    window.gtag("conversion", "click")
+    window.gtag("event", "click")
   }
   return (
     <Layout>
