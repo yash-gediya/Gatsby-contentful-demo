@@ -15,7 +15,6 @@ const Home = ({ data }) => {
           <Link className="btn" to="/projects">
             My Portfolio Projects
           </Link>
-          <button>Click</button>
         </div>
         <img
           src={data.file.childImageSharp.fluid.src}
