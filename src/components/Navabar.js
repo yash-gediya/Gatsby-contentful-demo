@@ -20,7 +20,7 @@ const Navabar = () => {
   const { title } = data.site.siteMetadata
   return (
     <nav>
-      <h1>{title}</h1>
+      <h1>;uihjf;pdfrg</h1>
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
