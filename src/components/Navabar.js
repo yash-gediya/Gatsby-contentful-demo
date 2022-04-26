@@ -22,8 +22,12 @@ const Navabar = () => {
     <nav>
       <h1>{title}</h1>
       <div className="links">
-        {/* <Link to="/">Home</Link> */}
-        <OutboundLink href="/">Home </OutboundLink>
+        <Link to="/">Home</Link>
+        {/* <OutboundLink href="/">Home </OutboundLink>
+        <OutboundLink href="/about">About </OutboundLink>
+
+        <OutboundLink href="/articles">Articles </OutboundLink> */}
+
         <Link to="/about">About</Link>
         <Link to="/articles">Articles</Link>
 
