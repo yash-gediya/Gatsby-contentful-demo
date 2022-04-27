@@ -5,6 +5,9 @@ import Layout from "../components/layout"
 import "../../src/pages/styles/home.css"
 
 const Home = ({ data }) => {
+  const imgSrc = data.file.childImageSharp
+  // console.log(data.file.childImageSharp)
+  console.log(data.file.childrenImageSharp[0].fluid.src)
   const handleClick = () => {
     window.gtag("event", "click")
   }
@@ -21,7 +24,7 @@ const Home = ({ data }) => {
           <button onClick={handleClick}>Click me</button>
         </div>
         <img
-          src={data.file.childImageSharp.fluid.src}
+          src={data.file.childrenImageSharp[0].fluid.src}
           alt="site banner"
           style={{ maxWidth: "100%" }}
         />
@@ -33,22 +36,11 @@ const Home = ({ data }) => {
 // ............page-Query............
 
 export default Home
-// export const query = graphql`
-//   query SiteInfo {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//         copyright
-//       }
-//     }
-//   }
-// `
 
 export const query = graphql`
-  query banner {
+  query BannerImg {
     file(relativePath: { eq: "banner.png" }) {
-      childImageSharp {
+      childrenImageSharp {
         fluid {
           src
         }
