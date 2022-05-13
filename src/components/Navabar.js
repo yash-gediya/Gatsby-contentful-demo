@@ -31,7 +31,7 @@ const Navabar = () => {
         <Link to="/about">About</Link>
         <Link to="/articles">Articles</Link>
 
-        <Link to="/projects">Portfolio Projects</Link>
+        <Link to="/products">Portfolio Projects</Link>
       </div>
     </nav>
   )
