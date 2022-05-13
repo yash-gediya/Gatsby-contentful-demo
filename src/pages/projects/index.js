@@ -16,7 +16,7 @@ const Projects = ({ data }) => {
           {projects.map(item => {
             return (
               <div>
-                <Link to={"/products/" + item.node.slug} key={item.id}>
+                <Link to={"/projects/" + item.node.slug} key={item.id}>
                   <img
                     src={item.node.thumb.file.url}
                     style={{ maxWidth: "100%" }}
