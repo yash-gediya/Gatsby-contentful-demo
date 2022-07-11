@@ -27,13 +27,23 @@ const Home = ({ data }) => {
               window.dataLayer = window.dataLayer || []
               window.dataLayer.push({
                 event: "buttonClick",
-                category: "Custom Button",
-                action: "click",
-                lable: "Google Analytics Custom Button",
               })
             }}
           >
             Click me
+          </button>
+
+          <button
+            onClick={e => {
+              e.preventDefault()
+              window.dataLayer = window.dataLayer || []
+              window.dataLayer.push({
+                category: "Button",
+                action: "Click the button from first page",
+              })
+            }}
+          >
+            Google Analytics
           </button>
         </div>
         <img
